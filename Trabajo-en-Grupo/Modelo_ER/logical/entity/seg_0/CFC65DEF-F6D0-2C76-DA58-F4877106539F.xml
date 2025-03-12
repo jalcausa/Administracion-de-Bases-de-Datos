@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CFC65DEF-F6D0-2C76-DA58-F4877106539F" name="Producto">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:38:55 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="GTIN" id="178E2936-A9FE-3B40-7E6C-E5F23624BF41">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:39:01 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SKU" id="46D7C2A7-0578-2EC6-3C19-DC0FBA5F6E06">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:39:30 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="032E07BE-7E43-8100-3DDD-7E615C061AEA">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:39:46 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Miniatura" id="6C769612-4656-DDD4-9FD1-29B6F76EBA48">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:39:52 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TextoCorto" id="8CC322EB-CC9F-D63C-7243-E006870B47B9">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:39:59 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Creado" id="2AE034E0-7557-9FC4-4012-51BD1FF4D995">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:40:41 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Modificado" id="F992124C-6719-B34B-3338-9F1C4FF2981A">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:40:49 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="7713A05A-6525-B774-19BE-1AD32ED5CC5B">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 11:04:14 UTC</createdTime>
+<generatorID>45A7C83C-85AD-2040-8B1E-09DDD035BB5C</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1654E369-429C-F7CE-FC91-B931F60C3E04" name="Entity_1 PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:41:19 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>178E2936-A9FE-3B40-7E6C-E5F23624BF41</attributeRef>
+<attributeRef>7713A05A-6525-B774-19BE-1AD32ED5CC5B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

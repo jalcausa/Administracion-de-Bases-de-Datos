@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5FAB358B-F5A5-60F3-89BD-ACDD8132F8AA" name="Activos">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:45:52 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="688E1B22-842B-1E34-EDBF-B963A1210CC8">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:46:06 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="B885632F-AB68-E41A-59D8-50311DBA203D">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:46:13 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tamaño" id="2BB62256-9EAC-ABF3-046F-EDEAD5770E9D">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:46:19 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tipo" id="C85BC8AE-66DE-79B4-1CC8-6C2E7479F89B">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:46:22 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="URL" id="1B9A2486-6586-5506-6DF7-8C60D5B10D41">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:46:33 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="B65AD8AD-36DD-08D0-F5DE-B4FF0DCBC721">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 11:05:42 UTC</createdTime>
+<generatorID>2E0E54E6-D3F8-F67C-D18F-46A3203C329C</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0C6FF426-3A9E-5113-4DF2-CEADECFF416F" name="Activos PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:46:12 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>688E1B22-842B-1E34-EDBF-B963A1210CC8</attributeRef>
+<attributeRef>B65AD8AD-36DD-08D0-F5DE-B4FF0DCBC721</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

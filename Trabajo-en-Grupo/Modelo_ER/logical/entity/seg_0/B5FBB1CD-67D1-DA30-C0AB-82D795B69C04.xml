@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B5FBB1CD-67D1-DA30-C0AB-82D795B69C04" name="Usuario">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:58:02 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="C3AD31FC-81ED-DA82-CE8D-E87D8193D75D">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:58:21 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NombreUsuario" id="5BEDB767-89B7-FC50-0810-F871AFAB62D0">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:58:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[Usuario con el que se conecta a la base de datos de Oracle]]></commentInRDBMS>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NombreCompleto" id="E445B151-6BD7-E810-4013-6E16FC85CE72">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:58:51 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Avatar" id="C19C609C-8F8A-57AF-8267-71476C8D646B">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:59:04 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Teléfono" id="5BDEC6D6-7511-C9AC-6FAB-63CCC1A41880">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:59:10 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="A62E8E9A-11B6-8845-511D-48EDC144FA72">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 11:01:34 UTC</createdTime>
+<generatorID>A218F359-0214-8556-A469-ABDF7E25156B</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="9B459F38-D714-AD0B-4F55-D70093D7BF48">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 11:02:12 UTC</createdTime>
+<generatorID>7EB95D0D-A0B5-664F-8BD5-57ED8918980A</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5F6EF2B5-B4F5-E07A-A1D3-78DDE79548D8" name="Usuario PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 11:00:55 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C3AD31FC-81ED-DA82-CE8D-E87D8193D75D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

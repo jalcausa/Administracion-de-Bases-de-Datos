@@ -1,0 +1,132 @@
+--SYSTEM:
+
+SELECT * FROM DBA_TABLESPACES;
+
+-- EJERCICIO 4
+CREATE PROFILE PERF_ADMINISTRATIVO LIMIT
+    IDLE_TIME 5
+    FAILED_LOGIN_ATTEMPTS 3;
+    
+-- Ejercicio 5
+CREATE PROFILE PERF_USUARIO LIMIT
+    SESSIONS_PER_USER 4
+    PASSWORD_LIFE_TIME 30;
+    
+-- Ejercicio 6
+SHOW PARAMETER RESOURCE_LIMIT;
+
+-- Ejercicio 7
+CREATE ROLE R_ADMINISTRADOR_SUPER;
+
+GRANT CREATE SESSION TO R_ADMINISTRADOR_SUPER;
+
+GRANT CREATE TABLE TO R_ADMINISTRADOR_SUPER;
+
+--Ejercicio 8
+CREATE USER USUARIO1 IDENTIFIED BY "usuario" PROFILE PERF_ADMINISTRATIVO;
+CREATE USER USUARIO2 IDENTIFIED BY "usuario" PROFILE PERF_ADMINISTRATIVO;
+
+GRANT R_ADMINISTRADOR_SUPER TO USUARIO1;
+GRANT R_ADMINISTRADOR_SUPER TO USUARIO2;
+
+ALTER USER USUARIO1 QUOTA 1M ON TS_PLYTIX;
+ALTER USER USUARIO2 QUOTA 1M ON TS_PLYTIX;
+
+ALTER USER USUARIO1 DEFAULT TABLESPACE TS_PLYTIX;
+ALTER USER USUARIO2 DEFAULT TABLESPACE TS_PLYTIX;
+
+-- Ejercicio 9
+-- Conectarse como USUARIO1 y como USUARIO2 y ejecutar la sentencia
+
+-- Ejercicio 10
+CREATE OR REPLACE PROCEDURE USUARIO1.PR_INSERTA_TABLA2 (
+                                P_CODIGO IN NUMBER) AS
+BEGIN
+    INSERT INTO TABLA2 VALUES (P_CODIGO);
+END PR_INSERTA_TABLA2;
+/
+
+-- Ejercicio 12
+GRANT EXECUTE ON USUARIO1.PR_INSERTA_TABLA2 TO USUARIO2;
+
+--Ejercicio 13 y 14
+-- Funciona y se inserta en la tabla de USUARIO1
+-- Ejercicio 15
+CREATE OR REPLACE PROCEDURE USUARIO1.PR_INSERTA_TABLA2 (
+                                P_CODIGO IN NUMBER) AS
+ BEGIN
+      execute immediate 'INSERT INTO TABLA2 VALUES ('||P_CODIGO||')';
+ END PR_INSERTA_TABLA2;
+/
+
+-- Ejercicio 18
+CREATE OR REPLACE PROCEDURE USUARIO1.PR_CREA_TABLA (
+  P_TABLA IN VARCHAR2, P_ATRIBUTO IN VARCHAR2) AS
+BEGIN
+  EXECUTE IMMEDIATE 'CREATE TABLE '||P_TABLA||'('||P_ATRIBUTO||' NUMBER(9))';
+ END PR_CREA_TABLA;
+/
+
+--Ejercicio 19
+-- No funciona porque los privilegios otorgados mediante roles no se aplican 
+--dentro de los procedimientos almacenados
+
+GRANT CREATE TABLE TO USUARIO1;
+
+GRANT EXECUTE ON USUARIO1.PR_CREA_TABLA TO USUARIO2;
+
+-- Ejercicio 22
+SELECT * FROM DBA_USERS_WITH_DEFPWD;
+
+--Ejercicio 23
+SELECT RESOURCE_NAME, LIMIT 
+FROM DBA_PROFILES 
+WHERE PROFILE = 'DEFAULT';
+
+ALTER PROFILE DEFAULT LIMIT 
+  FAILED_LOGIN_ATTEMPTS 4
+  PASSWORD_GRACE_TIME 5;
+
+ALTER USER USUARIO1 PROFILE DEFAULT;
+
+-- ERROR: Tras 5 intentos: ORA-28000: La cuenta estß bloqueada.
+
+ALTER USER USUARIO1 ACCOUNT UNLOCK;
+
+-- FAILED_LOGIN_ATTEMPTS: Bloquea la cuenta tras un número de intentos fallidos
+-- Funciona a nivel de usuario
+
+-- SEC_MAX_FAILED_LOGIN_ATTEMPTS: Expulsa la sesión tras un número de intentos 
+--fallidos, pero sin bloquear la cuenta.
+-- Funciona a nivel de base de datos (System Parameter)
+
+-- Se pueden eliminar todos los perfiles salvo el DEFAULT
+--  Si suamos CASACDE todos los usuarioscon ese perfil se reasignan a DEFAULT
+
+-- Parámetros dinámicos: Se pueden modificar en tiempo de ejecución,
+--sin reiniciar la base de datos
+
+-- Parámetros estáticos: Hay que reiniciar la base de datos para ver los cambios
+
+-- Se puede saber si es de un tipo u otro con el valor de ISSYS_MODIFIABLE
+
+--USUARIO1
+
+CREATE TABLE TABLA2
+(CODIGO NUMBER);
+
+exec USUARIO1.PR_INSERTA_TABLA2(10);
+
+COMMIT;
+
+exec PR_CREA_TABLA('PRUEBA1', 'ATRIBUTO1');
+
+--USUARIO2
+
+CREATE TABLE TABLA2
+(CODIGO NUMBER);
+
+exec USUARIO1.PR_INSERTA_TABLA2(15);
+COMMIT;
+
+exec USUARIO1.PR_CREA_TABLA('PRUEBA1', 'ATRIBUTO1');

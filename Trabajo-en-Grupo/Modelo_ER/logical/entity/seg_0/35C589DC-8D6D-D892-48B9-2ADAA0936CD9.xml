@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="35C589DC-8D6D-D892-48B9-2ADAA0936CD9" name="Relacionado">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:49:51 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nombre" id="4FF7B970-02F7-B021-64B5-0C202565E056">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:50:02 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Sentido" id="3158D1E1-ADB8-CB5F-EEA1-F09F0A9E5F85">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:50:05 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GTIN" id="1635B2B7-855F-439F-B63B-F2F7BBCAD800">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:51:27 UTC</createdTime>
+<generatorID>DEF5FD19-E931-2D04-907F-9EBF0DA2CF59</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<referedAttribute>178E2936-A9FE-3B40-7E6C-E5F23624BF41</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GTIN1" id="74A8A4CB-F4C3-8ECD-0BD4-FFC4AC59C9F8">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:51:47 UTC</createdTime>
+<generatorID>6929ED97-5F77-0177-CD8A-C2567ADAD87F</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<referedAttribute>178E2936-A9FE-3B40-7E6C-E5F23624BF41</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="22C1F5EE-DBF3-CA84-98FD-08B87CFE7DEF">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 11:04:14 UTC</createdTime>
+<generatorID>DEF5FD19-E931-2D04-907F-9EBF0DA2CF59</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<referedAttribute>7713A05A-6525-B774-19BE-1AD32ED5CC5B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="479D77AD-3052-D10F-8314-28F8FC7F6EE9">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 11:04:14 UTC</createdTime>
+<generatorID>6929ED97-5F77-0177-CD8A-C2567ADAD87F</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<referedAttribute>7713A05A-6525-B774-19BE-1AD32ED5CC5B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7FB248F0-55A3-5599-BD30-DD9BCC070B75" name="Relacionado PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-02-24 10:51:27 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1635B2B7-855F-439F-B63B-F2F7BBCAD800</attributeRef>
+<attributeRef>22C1F5EE-DBF3-CA84-98FD-08B87CFE7DEF</attributeRef>
+<attributeRef>74A8A4CB-F4C3-8ECD-0BD4-FFC4AC59C9F8</attributeRef>
+<attributeRef>479D77AD-3052-D10F-8314-28F8FC7F6EE9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

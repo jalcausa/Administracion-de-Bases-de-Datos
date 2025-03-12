@@ -1,0 +1,82 @@
+-- SYSTEM
+SHOW PARAMETER TDE_CONFIGURATION;
+
+ALTER SYSTEM SET "WALLET_ROOT"='C:\app\alumnos\admin\orcl\wallet' scope=SPFILE;
+
+ALTER SYSTEM SET TDE_CONFIGURATION="KEYSTORE_CONFIGURATION=FILE" scope=both;
+
+
+
+CREATE TABLE USUARIO(
+    id NUMBER PRIMARY KEY,
+    NombreUsuario VARCHAR2(10) NOT NULL,
+    NombreCompleto VARCHAR2(100) ENCRYPT NOT NULL,
+    Avatar VARCHAR2(10),
+    Email VARCHAR(100) NOT NULL,
+    Telefono NUMBER
+);
+
+SELECT * FROM DBA_ENCRYPTED_COLUMNS;
+
+SELECT tablespace_name, file_name 
+FROM dba_data_files;
+
+alter system flush buffer_cache;
+
+grant create procedure to USUARIO1;
+
+CREATE USER jalcausa IDENTIFIED BY "Febrero.2025";
+GRANT CONNECT TO jalcausa;
+
+
+-- Crear y activar la política:
+-- Lo que hace es añadir automaticamente como clausula WHERE el resultado del procedimiento
+-- cada vez que hago un select sobre esta
+/*
+begin dbms_rls.add_policy (object_schema =>'USUARIO1',
+object_name =>'USUARIO',
+policy_name =>'POL_USUARIO',
+function_schema =>'USUARIO1',
+policy_function => 'vpd_function',
+statement_types => 'SELECT, UPDATE, DELETE' ); 
+end;
+/
+*/
+
+-- Desactivar la política
+begin DBMS_RLS.ENABLE_POLICY (object_schema=>'USUARIO1',    object_name=>'USUARIO', policy_name=>'POL_USUARIO', enable=>false);
+end;
+/
+
+-- 
+BEGIN
+  DBMS_RLS.ADD_POLICY (
+    object_schema           => 'USUARIO1',           -- Esquema de la tabla
+    object_name             => 'USUARIO',            -- Nombre de la tabla
+    policy_name             => 'POL_TELEFONO',       -- Nombre de la nueva política
+    function_schema         => 'USUARIO1',           -- Esquema de la función
+    policy_function         => 'VPD_FUNCTION',       -- Función existente
+    statement_types         => 'SELECT',             -- Solo aplica a SELECT
+    sec_relevant_cols       => 'TELEFONO',           -- Columna sensible
+    sec_relevant_cols_opt   => DBMS_RLS.ALL_ROWS     -- Mostrar todas las filas, pero ocultar TELEFONO si no cumplen el predicado
+  );
+END;
+/
+
+--USUARIO1
+create or replace function vpd_function(p_schema varchar2, p_obj varchar2)
+  Return varchar2
+is
+  Vusuario VARCHAR2(100);
+Begin
+  Vusuario := SYS_CONTEXT('userenv', 'SESSION_USER');
+  return 'UPPER(Nombreusuario) = ''' || Vusuario || '''';
+End;
+/
+
+GRANT SELECT ON USUARIO TO jalcausa;
+
+select * from usuario;
+
+-- JALCAUSA
+SELECT * FROM USUARIO1.USUARIO;
