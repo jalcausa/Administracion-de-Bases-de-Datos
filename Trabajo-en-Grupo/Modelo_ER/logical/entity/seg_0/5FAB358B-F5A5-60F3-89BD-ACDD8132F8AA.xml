@@ -24,6 +24,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Nombre" id="B885632F-AB68-E41A-59D8-50311DBA203D">
@@ -35,7 +36,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Tamaño" id="2BB62256-9EAC-ABF3-046F-EDEAD5770E9D">
 <createdBy>jcalc</createdBy>
@@ -46,6 +49,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Tipo" id="C85BC8AE-66DE-79B4-1CC8-6C2E7479F89B">
@@ -58,7 +62,9 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="URL" id="1B9A2486-6586-5506-6DF7-8C60D5B10D41">
 <createdBy>jcalc</createdBy>
@@ -70,9 +76,11 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="B65AD8AD-36DD-08D0-F5DE-B4FF0DCBC721">
+<Attribute name="Cuenta ID" id="B65AD8AD-36DD-08D0-F5DE-B4FF0DCBC721">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:05:42 UTC</createdTime>
 <generatorID>2E0E54E6-D3F8-F67C-D18F-46A3203C329C</generatorID>
@@ -83,6 +91,7 @@
 <referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -91,8 +100,9 @@
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 10:46:12 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

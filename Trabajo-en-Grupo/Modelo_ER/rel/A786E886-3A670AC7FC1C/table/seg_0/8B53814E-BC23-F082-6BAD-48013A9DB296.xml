@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8B53814E-BC23-F082-6BAD-48013A9DB296" name="Cuenta">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>CCE4823B-C836-DEFD-B4A8-466DC2C6441A</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="5AC406CE-4459-B365-CC00-CA6D2D93196A">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>A923BAEC-6CF0-AF04-281A-795332B30ED1</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="08A2CC42-F76A-7E8A-FE0A-0D603A15EE77">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>FB1EAF93-FF95-AC16-2A9B-33B216A5A1D0</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DireccionFiscal" id="74DFC935-E9EC-C8E6-93E1-D1612114485C">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>521902ED-3472-64EF-C1EC-25C64E565B5F</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NIF" id="1B7A6198-35F5-5E8E-18F5-BA90EEDBD565">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>04418807-562A-3BD7-D94D-6DB4B94BFA2C</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaAlta" id="421AB19B-DB80-7472-AD50-E824483EE83C">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>01FB2CB1-6B55-28B9-1ADC-2001A018990D</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Usuario_ID" id="D5DD0DB6-2F78-AF48-3C3C-4535B9E772B4">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>1122F139-81D8-A84A-B852-A633E2407403</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Plan_ID" id="E93784AE-D67A-FC72-D36E-35152E9A2CBA">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>BB458E2B-6E28-72B7-7549-E775AD128303</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DD20FA0B-27C7-E61F-3041-B3DA4EB2921D" referredColumn="4A036CF6-C554-D80D-A237-8CA01DD51D5C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A8E510E7-4F4E-0742-11A2-7A6170552511" name="Cuenta_PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>FF45BD0E-F0A2-0B32-1FE9-D21DDB68A9D2</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AC406CE-4459-B365-CC00-CA6D2D93196A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="800352BD-2B73-CE0B-10F1-CA1418FCB800" name="Cuenta__IDX">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>7EB95D0D-A0B5-664F-8BD5-57ED8918980A</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="D5DD0DB6-2F78-AF48-3C3C-4535B9E772B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AD8826FE-F25C-24BF-FD72-3A8E286D41A9" name="Cuenta_Plan_FK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>B8BA49AB-C3BE-20A6-B7D6-C08922BED69E</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E93784AE-D67A-FC72-D36E-35152E9A2CBA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

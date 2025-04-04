@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0CFE5373-B612-5F38-6A03-9135B631F07A" name="Categoría">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>64B25CE1-6430-3903-2945-8AE866837902</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="6F4684C8-A34B-FB3F-7184-25FA674124E2">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>BE9E23D6-90E4-7E14-FE27-1F2DAE757BAB</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="5A1B239C-9B3A-4FB1-B94B-6DB339EC466E">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>23014B84-0AF5-0708-9575-57739AB1FDF5</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cuenta_ID" id="9ABDFA41-4F5D-57B3-856F-3DCFB8B50883">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-31 10:15:38 UTC</createdTime>
+<generatorID>48BB9A7A-4093-D99C-5D3C-8BB5B8626894</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="888694E8-3E0B-7157-E726-351BF99A227E" referredColumn="5AC406CE-4459-B365-CC00-CA6D2D93196A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AAC57F3F-7C30-2BF2-BB60-4F1186A8C9DF" name="Categoría_PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>3E11A858-527B-781C-4446-CAA0A75FB02C</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F4684C8-A34B-FB3F-7184-25FA674124E2"/>
+<colUsage columnID="9ABDFA41-4F5D-57B3-856F-3DCFB8B50883"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA97932C-567B-EB5D-CC67-2F6048A71D55" name="Categoría_Cuenta_FK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-31 10:15:38 UTC</createdTime>
+<generatorID>BB005B38-71F8-D12D-8C49-DF073B13CC00</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9ABDFA41-4F5D-57B3-856F-3DCFB8B50883"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

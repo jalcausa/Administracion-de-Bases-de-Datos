@@ -24,6 +24,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Productos" id="47B74A01-E8C8-AC8D-308E-5CEC2D110DBD">
@@ -35,6 +36,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Activos" id="17217BCB-2FF2-D01E-6FD8-A36929EF0BEA">
@@ -46,6 +48,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Almacenamiento" id="6D262E57-3EB8-10CE-F8EE-86048854C4FF">
@@ -57,7 +60,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="CategoriasProducto" id="66BD2EE6-98B0-45C5-2D91-DBBC3A0566BE">
 <createdBy>jcalc</createdBy>
@@ -67,7 +72,9 @@
 <item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="CategoriasActivos" id="10787012-A67E-992E-1DAA-B6D4E4981115">
@@ -78,7 +85,9 @@
 <item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Relaciones" id="E375C4E8-7AA1-8923-2D5A-03A80E4F6B7F">
@@ -90,6 +99,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Precio" id="7859DBF7-5CCA-6DE0-900F-EA50F98C6CE3">
@@ -101,6 +111,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -109,8 +120,9 @@
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:10:58 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

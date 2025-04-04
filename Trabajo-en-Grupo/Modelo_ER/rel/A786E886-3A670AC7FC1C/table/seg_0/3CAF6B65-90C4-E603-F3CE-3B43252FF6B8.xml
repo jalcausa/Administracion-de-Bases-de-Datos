@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3CAF6B65-90C4-E603-F3CE-3B43252FF6B8" name="Plan">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>8767E480-32A6-812F-0DF4-0045531CB37E</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4A036CF6-C554-D80D-A237-8CA01DD51D5C">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>37A835D8-0F2A-98E4-05A8-1053E9A5E6D2</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Productos" id="CD6EDE04-47F9-79A7-D9BC-4DF3E2AC4ED8">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>47B74A01-E8C8-AC8D-308E-5CEC2D110DBD</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Activos" id="1780CA1D-A0D2-37CC-DDBF-DCE23BAA4452">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>17217BCB-2FF2-D01E-6FD8-A36929EF0BEA</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Almacenamiento" id="E7C99ED6-D0DE-C3E0-EE1B-97CBD5A2D114">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>6D262E57-3EB8-10CE-F8EE-86048854C4FF</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CategoriasProducto" id="CD2418E2-1F90-5432-765C-B90A7AF37D58">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>66BD2EE6-98B0-45C5-2D91-DBBC3A0566BE</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CategoriasActivos" id="B7F77017-99EB-484B-4562-4A25E0C278C0">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>10787012-A67E-992E-1DAA-B6D4E4981115</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Relaciones" id="95679B85-9C31-055F-4A84-16A711460E5E">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>E375C4E8-7AA1-8923-2D5A-03A80E4F6B7F</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Precio" id="E27352B7-22A0-FFE6-356C-7F64B0AC670A">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>7859DBF7-5CCA-6DE0-900F-EA50F98C6CE3</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DCD572F6-109E-00C4-D9B6-D84AB7D45BFF" name="Plan_PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>5A2C3189-936A-FA59-F7FC-922F2DC7B98C</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A036CF6-C554-D80D-A237-8CA01DD51D5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -24,6 +24,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SKU" id="46D7C2A7-0578-2EC6-3C19-DC0FBA5F6E06">
@@ -35,7 +36,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Nombre" id="032E07BE-7E43-8100-3DDD-7E615C061AEA">
 <createdBy>jcalc</createdBy>
@@ -46,7 +49,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Miniatura" id="6C769612-4656-DDD4-9FD1-29B6F76EBA48">
 <createdBy>jcalc</createdBy>
@@ -58,7 +63,9 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="TextoCorto" id="8CC322EB-CC9F-D63C-7243-E006870B47B9">
 <createdBy>jcalc</createdBy>
@@ -70,7 +77,9 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Creado" id="2AE034E0-7557-9FC4-4012-51BD1FF4D995">
 <createdBy>jcalc</createdBy>
@@ -82,6 +91,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Modificado" id="F992124C-6719-B34B-3338-9F1C4FF2981A">
@@ -94,9 +104,10 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID" id="7713A05A-6525-B774-19BE-1AD32ED5CC5B">
+<Attribute name="Cuenta ID" id="7713A05A-6525-B774-19BE-1AD32ED5CC5B">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:04:14 UTC</createdTime>
 <generatorID>45A7C83C-85AD-2040-8B1E-09DDD035BB5C</generatorID>
@@ -107,16 +118,18 @@
 <referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="1654E369-429C-F7CE-FC91-B931F60C3E04" name="Entity_1 PK">
+<identifier id="1654E369-429C-F7CE-FC91-B931F60C3E04" name="Producto_PK">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 10:41:19 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

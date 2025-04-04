@@ -24,6 +24,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="NombreUsuario" id="5BEDB767-89B7-FC50-0810-F871AFAB62D0">
@@ -34,8 +35,11 @@
 <engineerTo>
 <item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
 </engineerTo>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="NombreCompleto" id="E445B151-6BD7-E810-4013-6E16FC85CE72">
 <createdBy>jcalc</createdBy>
@@ -46,7 +50,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Avatar" id="C19C609C-8F8A-57AF-8267-71476C8D646B">
 <createdBy>jcalc</createdBy>
@@ -58,7 +64,9 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Teléfono" id="5BDEC6D6-7511-C9AC-6FAB-63CCC1A41880">
 <createdBy>jcalc</createdBy>
@@ -70,9 +78,10 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="A62E8E9A-11B6-8845-511D-48EDC144FA72">
+<Attribute name="Cuenta ID1" id="A62E8E9A-11B6-8845-511D-48EDC144FA72">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:01:34 UTC</createdTime>
 <generatorID>A218F359-0214-8556-A469-ABDF7E25156B</generatorID>
@@ -83,9 +92,10 @@
 <referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID2" id="9B459F38-D714-AD0B-4F55-D70093D7BF48">
+<Attribute name="Cuenta ID" id="9B459F38-D714-AD0B-4F55-D70093D7BF48">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:02:12 UTC</createdTime>
 <generatorID>7EB95D0D-A0B5-664F-8BD5-57ED8918980A</generatorID>
@@ -97,6 +107,7 @@
 <referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -105,8 +116,9 @@
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:00:55 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

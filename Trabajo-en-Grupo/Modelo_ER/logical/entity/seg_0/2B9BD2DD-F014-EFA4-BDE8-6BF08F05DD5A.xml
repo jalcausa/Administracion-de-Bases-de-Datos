@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B9BD2DD-F014-EFA4-BDE8-6BF08F05DD5A" name="Categoria_activos">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B9BD2DD-F014-EFA4-BDE8-6BF08F05DD5A" name="Categoria activos">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:06:01 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
@@ -24,6 +24,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Nombre" id="FBF89E3D-2F5C-9E33-4891-E8717D771175">
@@ -35,9 +36,11 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="D12B8E86-C840-E2FD-8141-1CB27A1D63D9">
+<Attribute name="Cuenta ID" id="D12B8E86-C840-E2FD-8141-1CB27A1D63D9">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:07:02 UTC</createdTime>
 <generatorID>2C119D50-8CA0-074E-488F-3E8BED92677F</generatorID>
@@ -48,16 +51,18 @@
 <referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="DBC194C2-2B63-9AAA-BEAC-FE7041C67023" name="Categoria_activos PK">
+<identifier id="DBC194C2-2B63-9AAA-BEAC-FE7041C67023" name="Categoria_activos_PK">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:07:02 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

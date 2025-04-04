@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="737FB296-6B21-B084-E43E-14F7A02234F3" name="Relation_4">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Producto_GTIN" id="EA1D968F-86A1-22B5-369F-DBE2C46D3077">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD96F41C-3057-1BE5-9DAF-7A4F9A1CF2BE" referredColumn="0CF72849-E701-C4CB-B265-222300231A86"/>
+</associations>
+</Column>
+<Column name="Producto_Cuenta_ID" id="96E93824-FE07-68A0-BFDB-DCAF6D6FAEF3">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD96F41C-3057-1BE5-9DAF-7A4F9A1CF2BE" referredColumn="10E78D8F-E2B8-2252-2C90-4E5F696F22B8"/>
+</associations>
+</Column>
+<Column name="Activos_ID" id="DB8C4890-D486-4FB5-AADA-DF99CC772A91">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EFAAD370-6299-0119-D310-E3E18064DC2F" referredColumn="2069EC05-D3B2-2C11-3170-8C667BB4B397"/>
+</associations>
+</Column>
+<Column name="Activos_Cuenta_ID" id="21432A3C-C04D-A51F-979F-599474299CA6">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EFAAD370-6299-0119-D310-E3E18064DC2F" referredColumn="66CEC61A-6FC3-7486-8174-0E81958BA95F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="83166ACB-88FC-EB80-6EA6-E53E9707BBB8" name="Relation_4_PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA1D968F-86A1-22B5-369F-DBE2C46D3077"/>
+<colUsage columnID="96E93824-FE07-68A0-BFDB-DCAF6D6FAEF3"/>
+<colUsage columnID="DB8C4890-D486-4FB5-AADA-DF99CC772A91"/>
+<colUsage columnID="21432A3C-C04D-A51F-979F-599474299CA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA5A266A-1639-6E3C-7524-05C0FEFADB2B" name="Relation_4_Producto_FK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>0C0A58FE-183C-4EBB-7BB7-E4A6D6CB0F4B</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA1D968F-86A1-22B5-369F-DBE2C46D3077"/>
+<colUsage columnID="96E93824-FE07-68A0-BFDB-DCAF6D6FAEF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="473AD0E0-6BB8-DAEB-CBFB-D2B51C764341" name="Relation_4_Activos_FK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>0C0A58FE-183C-4EBB-7BB7-E4A6D6CB0F4B</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB8C4890-D486-4FB5-AADA-DF99CC772A91"/>
+<colUsage columnID="21432A3C-C04D-A51F-979F-599474299CA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -24,7 +24,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Sentido" id="3158D1E1-ADB8-CB5F-EEA1-F09F0A9E5F85">
 <createdBy>jcalc</createdBy>
@@ -36,9 +38,11 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="GTIN" id="1635B2B7-855F-439F-B63B-F2F7BBCAD800">
+<Attribute name="Producto GTIN" id="1635B2B7-855F-439F-B63B-F2F7BBCAD800">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 10:51:27 UTC</createdTime>
 <generatorID>DEF5FD19-E931-2D04-907F-9EBF0DA2CF59</generatorID>
@@ -49,9 +53,10 @@
 <referedAttribute>178E2936-A9FE-3B40-7E6C-E5F23624BF41</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="GTIN1" id="74A8A4CB-F4C3-8ECD-0BD4-FFC4AC59C9F8">
+<Attribute name="Producto GTIN1" id="74A8A4CB-F4C3-8ECD-0BD4-FFC4AC59C9F8">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 10:51:47 UTC</createdTime>
 <generatorID>6929ED97-5F77-0177-CD8A-C2567ADAD87F</generatorID>
@@ -62,11 +67,12 @@
 <referedAttribute>178E2936-A9FE-3B40-7E6C-E5F23624BF41</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID" id="22C1F5EE-DBF3-CA84-98FD-08B87CFE7DEF">
+<Attribute name="Producto Cuenta ID" id="FE3818F3-EB61-85D9-CE6A-6FEA242FE898">
 <createdBy>jcalc</createdBy>
-<createdTime>2025-02-24 11:04:14 UTC</createdTime>
+<createdTime>2025-03-31 10:05:03 UTC</createdTime>
 <generatorID>DEF5FD19-E931-2D04-907F-9EBF0DA2CF59</generatorID>
 <ownerDesignName>Modelo_ER</ownerDesignName>
 <engineerTo>
@@ -75,11 +81,12 @@
 <referedAttribute>7713A05A-6525-B774-19BE-1AD32ED5CC5B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="479D77AD-3052-D10F-8314-28F8FC7F6EE9">
+<Attribute name="Producto Cuenta ID1" id="3858E8E9-4648-93E7-688C-44424DBF9254">
 <createdBy>jcalc</createdBy>
-<createdTime>2025-02-24 11:04:14 UTC</createdTime>
+<createdTime>2025-03-31 10:05:03 UTC</createdTime>
 <generatorID>6929ED97-5F77-0177-CD8A-C2567ADAD87F</generatorID>
 <ownerDesignName>Modelo_ER</ownerDesignName>
 <engineerTo>
@@ -88,6 +95,7 @@
 <referedAttribute>7713A05A-6525-B774-19BE-1AD32ED5CC5B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -96,15 +104,16 @@
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 10:51:27 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>1635B2B7-855F-439F-B63B-F2F7BBCAD800</attributeRef>
-<attributeRef>22C1F5EE-DBF3-CA84-98FD-08B87CFE7DEF</attributeRef>
+<attributeRef>FE3818F3-EB61-85D9-CE6A-6FEA242FE898</attributeRef>
 <attributeRef>74A8A4CB-F4C3-8ECD-0BD4-FFC4AC59C9F8</attributeRef>
-<attributeRef>479D77AD-3052-D10F-8314-28F8FC7F6EE9</attributeRef>
+<attributeRef>3858E8E9-4648-93E7-688C-44424DBF9254</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

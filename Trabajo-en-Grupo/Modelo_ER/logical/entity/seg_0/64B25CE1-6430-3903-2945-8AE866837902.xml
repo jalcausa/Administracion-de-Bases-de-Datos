@@ -24,6 +24,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Nombre" id="23014B84-0AF5-0708-9575-57739AB1FDF5">
@@ -35,6 +36,22 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="48BB9A7A-4093-D99C-5D3C-8BB5B8626894">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-31 08:53:32 UTC</createdTime>
+<generatorID>BB005B38-71F8-D12D-8C49-DF073B13CC00</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<engineerTo>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+</engineerTo>
+<referedAttribute>A923BAEC-6CF0-AF04-281A-795332B30ED1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -43,12 +60,14 @@
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 10:54:22 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>BE9E23D6-90E4-7E14-FE27-1F2DAE757BAB</attributeRef>
+<attributeRef>48BB9A7A-4093-D99C-5D3C-8BB5B8626894</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

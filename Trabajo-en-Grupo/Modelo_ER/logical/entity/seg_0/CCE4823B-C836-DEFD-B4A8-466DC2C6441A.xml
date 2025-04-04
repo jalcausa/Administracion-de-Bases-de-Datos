@@ -24,6 +24,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Nombre" id="FB1EAF93-FF95-AC16-2A9B-33B216A5A1D0">
@@ -35,7 +36,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="DireccionFiscal" id="521902ED-3472-64EF-C1EC-25C64E565B5F">
 <createdBy>jcalc</createdBy>
@@ -46,7 +49,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="NIF" id="04418807-562A-3BD7-D94D-6DB4B94BFA2C">
 <createdBy>jcalc</createdBy>
@@ -57,7 +62,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="FechaAlta" id="01FB2CB1-6B55-28B9-1ADC-2001A018990D">
 <createdBy>jcalc</createdBy>
@@ -68,9 +75,10 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="1122F139-81D8-A84A-B852-A633E2407403">
+<Attribute name="Usuario ID" id="1122F139-81D8-A84A-B852-A633E2407403">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:02:21 UTC</createdTime>
 <generatorID>7EB95D0D-A0B5-664F-8BD5-57ED8918980A</generatorID>
@@ -82,9 +90,10 @@
 <referedAttribute>C3AD31FC-81ED-DA82-CE8D-E87D8193D75D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID2" id="BB458E2B-6E28-72B7-7549-E775AD128303">
+<Attribute name="Plan ID" id="BB458E2B-6E28-72B7-7549-E775AD128303">
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:13:14 UTC</createdTime>
 <generatorID>B8BA49AB-C3BE-20A6-B7D6-C08922BED69E</generatorID>
@@ -95,6 +104,7 @@
 <referedAttribute>37A835D8-0F2A-98E4-05A8-1053E9A5E6D2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -103,8 +113,9 @@
 <createdBy>jcalc</createdBy>
 <createdTime>2025-02-24 11:00:12 UTC</createdTime>
 <ownerDesignName>Modelo_ER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="true"/>
+<item key="A786E886-C319-0A3B-50F7-3A670AC7FC1C" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6045045-941F-8368-9B1D-CEFDA8706756" name="Atributo_Producto">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>1952641C-1358-1758-D1E8-64C6794029C0</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Valor" id="9EC07B50-8A1B-C452-200A-9A1E6608C423">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>4DD21655-AF00-4601-BDD9-0E8C5669B429</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Producto_GTIN" id="E4054898-371F-5312-5649-7B15D706F33C">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>FA3C5008-2EDF-0B4A-B640-D267BED9F960</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CAD20D46-6455-073D-88CA-A35E96D3D179" referredColumn="0CF72849-E701-C4CB-B265-222300231A86"/>
+</associations>
+</Column>
+<Column name="Atributos_ID" id="B872398B-B41B-5C89-1E1C-F11A9B051557">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>8EB9C12C-6C72-9025-50CB-B6EA5A18EFD7</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="678E0095-44E1-460F-4770-7CC72E234260" referredColumn="64B5A283-EBB3-B951-6D73-7BF2AA8C856D"/>
+</associations>
+</Column>
+<Column name="Producto_Cuenta_ID" id="DDE810BE-78DD-BE9D-4F82-97BF76643EEB">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>AA2DECF3-F472-2291-8EB5-078FDF8EBEA9</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CAD20D46-6455-073D-88CA-A35E96D3D179" referredColumn="10E78D8F-E2B8-2252-2C90-4E5F696F22B8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3A06F133-2B05-15AC-5F01-1FF4FF82620B" name="Atributo_Producto_PK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>895A0C4E-152F-AC45-4F6D-CA9EA1B1AAD1</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4054898-371F-5312-5649-7B15D706F33C"/>
+<colUsage columnID="DDE810BE-78DD-BE9D-4F82-97BF76643EEB"/>
+<colUsage columnID="B872398B-B41B-5C89-1E1C-F11A9B051557"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A8F9C6E9-54ED-150C-B9B5-55916F756E2B" name="Atributo_Producto_Producto_FK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>D0515B6D-BA17-6E55-2016-AA712284B568</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4054898-371F-5312-5649-7B15D706F33C"/>
+<colUsage columnID="DDE810BE-78DD-BE9D-4F82-97BF76643EEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17AD9D94-AE09-4D69-08DD-5B9154574F85" name="Atributo_Producto_Atributos_FK">
+<createdBy>jcalc</createdBy>
+<createdTime>2025-03-25 13:11:44 UTC</createdTime>
+<generatorID>5A69095E-7C96-1ADA-CA37-90FAF1779944</generatorID>
+<ownerDesignName>Modelo_ER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B872398B-B41B-5C89-1E1C-F11A9B051557"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
