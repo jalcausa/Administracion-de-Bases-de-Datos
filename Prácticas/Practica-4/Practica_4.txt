@@ -1,0 +1,54 @@
+-- CREATE TABLE MENSAJES(Codigo NUMBER(2) PRIMARY KEY, Texto VARCHAR2(50));
+-- CREATE TABLE USUARIOS(Codigo NUMBER(2) PRIMARY KEY, Nombre VARCHAR2(50));
+-- SELECT * FROM USER_TABLES;
+-- Hay que poner lo de abajo una vez por sesion para que salga el output
+SET SERVEROUTPUT ON;
+
+-- Ejercicio 1
+DECLARE
+    CURSOR cur_tablas IS SELECT TABLE_NAME FROM USER_TABLES;
+BEGIN
+    FOR v_tabla IN cur_tablas LOOP
+        DBMS_OUTPUT.PUT_LINE('La tabla ' || v_tabla.TABLE_NAME || ' pertence al esquema ' || USER);
+    END LOOP;
+END;
+/
+
+-- Ejercicio 2
+-- SELECT * FROM ALL_TABLES;
+DECLARE
+    CURSOR cur_tablas IS SELECT TABLE_NAME, OWNER FROM ALL_TABLES
+    WHERE OWNER = OWNER;
+BEGIN
+    FOR v_tabla IN cur_tablas LOOP
+        DBMS_OUTPUT.PUT_LINE('La tabla ' || v_tabla.TABLE_NAME || ' pertence al esquema ' || v_tabla.OWNER);
+    END LOOP;
+END;
+/
+
+-- Ejercicio 3: hay que añadir el owner
+
+-- Ejercicio 4: volver a hacer el 1 basandonos en el 2
+DECLARE
+    CURSOR cur_tablas IS SELECT TABLE_NAME, OWNER FROM ALL_TABLES WHERE OWNER = USER;
+BEGIN
+    FOR v_tabla IN cur_tablas LOOP
+        DBMS_OUTPUT.PUT_LINE('La tabla ' || v_tabla.TABLE_NAME || ' pertence al esquema ' || v_tabla.OWNER);
+    END LOOP;
+END;
+/
+
+-- Ejercicio 5: 
+CREATE OR REPLACE PROCEDURE RECORRE_TABLAS (P_MODE IN NUMBER DEFAULT NULL) IS
+    CURSOR cur_tablas IS SELECT TABLE_NAME, OWNER FROM ALL_TABLES
+    WHERE OWNER = DECODE(P_MODE, 0, OWNER, USER);
+BEGIN
+    IF P_MODE IS NULL THEN
+        DBMS_OUTPUT.PUT_LINE('Introduzca 0 para todas las tablas con permiso, 1 para el usuario.');
+    ELSE    
+        FOR v_tabla IN cur_tablas LOOP
+            DBMS_OUTPUT.PUT_LINE('La tabla ' || v_tabla.TABLE_NAME || ' pertence al esquema ' || v_tabla.OWNER);
+        END LOOP;
+    END IF;  
+END;
+/
