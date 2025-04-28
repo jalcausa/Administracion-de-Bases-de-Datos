@@ -1,12 +1,18 @@
+-- TDE (Transparent Data Encryption)
 -- SYSTEM
+-- Una vez configurado nos dice como esta configurado el TDE:
 SHOW PARAMETER TDE_CONFIGURATION;
 
+-- Establece la ubicación donde se guardarán los archivos de TDE
+-- incluido el keystore
 ALTER SYSTEM SET "WALLET_ROOT"='C:\app\alumnos\admin\orcl\wallet' scope=SPFILE;
 
+-- CONFIGURAMOS LA BD PARA QUE USE UN KEYSTORE DE TIPO FILE
+-- Otra opción sería usar el almacén de claves de Windows
 ALTER SYSTEM SET TDE_CONFIGURATION="KEYSTORE_CONFIGURATION=FILE" scope=both;
 
 
-
+-- COMO USUARIO1:
 CREATE TABLE USUARIO(
     id NUMBER PRIMARY KEY,
     NombreUsuario VARCHAR2(10) NOT NULL,
@@ -16,6 +22,7 @@ CREATE TABLE USUARIO(
     Telefono NUMBER
 );
 
+-- COMO SYSTEM:
 SELECT * FROM DBA_ENCRYPTED_COLUMNS;
 
 SELECT tablespace_name, file_name 
@@ -28,6 +35,18 @@ grant create procedure to USUARIO1;
 CREATE USER jalcausa IDENTIFIED BY "Febrero.2025";
 GRANT CONNECT TO jalcausa;
 
+-- VPD (Virtual Private Databse): políticas de seguridad de Oracle
+-- COMO USUARIO1:
+
+create or replace function vpd_function(p_schema varchar2, p_obj varchar2)
+  Return varchar2
+is
+  Vusuario VARCHAR2(100);
+Begin
+  Vusuario := SYS_CONTEXT('userenv', 'SESSION_USER');
+  return 'UPPER(Nombreusuario) = ''' || Vusuario || '''';
+End;
+/
 
 -- Crear y activar la política:
 -- Lo que hace es añadir automaticamente como clausula WHERE el resultado del procedimiento

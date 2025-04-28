@@ -1,0 +1,103 @@
+CREATE TABLE TB_OBJETOS (
+    NOMBRE VARCHAR2(128),
+    CODIGO NUMBER,
+    FECHA_CREACION DATE,
+    FECHA_MODIFICACION DATE,
+    TIPO VARCHAR2(30),
+    ESQUEMA_ORIGINAL VARCHAR2(30)
+);
+
+SELECT * FROM ALL_OBJECTS;
+
+DECLARE
+    CURSOR cur_objects IS
+        SELECT OBJECT_NAME, OBJECT_ID, CREATED, LAST_DDL_TIME, OBJECT_TYPE, OWNER
+        FROM ALL_OBJECTS;
+BEGIN
+    FOR v_objeto IN cur_objects LOOP
+        -- Insertar en la tabla
+        INSERT INTO TB_OBJETOS (
+            NOMBRE, CODIGO, FECHA_CREACION, FECHA_MODIFICACION, TIPO, ESQUEMA_ORIGINAL
+        ) VALUES (
+            v_objeto.OBJECT_NAME,
+            v_objeto.OBJECT_ID,
+            v_objeto.CREATED,
+            v_objeto.LAST_DDL_TIME,
+            v_objeto.OBJECT_TYPE,
+            v_objeto.OWNER
+        );
+    END LOOP;
+
+    -- Confirmar los cambios
+    COMMIT;
+END;
+/
+
+-- Crear la tabla TB_ESTILO
+CREATE TABLE TB_ESTILO (
+    TIPO_OBJETO VARCHAR2(30) NOT NULL, -- Tipo de objeto (e.g., PROCEDURE, FUNCTION, etc.)
+    PREFIJO VARCHAR2(10) NOT NULL      -- Prefijo asociado al tipo de objeto
+);
+
+-- Insertar algunas normas de estilo en la tabla
+BEGIN
+    INSERT INTO TB_ESTILO (TIPO_OBJETO, PREFIJO) VALUES ('PROCEDURE', 'PR_');
+    INSERT INTO TB_ESTILO (TIPO_OBJETO, PREFIJO) VALUES ('FUNCTION', 'FN_');
+    INSERT INTO TB_ESTILO (TIPO_OBJETO, PREFIJO) VALUES ('PACKAGE', 'PKG_');
+    INSERT INTO TB_ESTILO (TIPO_OBJETO, PREFIJO) VALUES ('TRIGGER', 'TRG_');
+    INSERT INTO TB_ESTILO (TIPO_OBJETO, PREFIJO) VALUES ('VIEW', 'VW_');
+    INSERT INTO TB_ESTILO (TIPO_OBJETO, PREFIJO) VALUES ('TABLE', 'TB_');
+    COMMIT;
+END;
+/
+
+-- EJERCICIO 3
+
+-- Ampliación de la tabla TB_OBJETOS para incluir los nuevos atributos
+ALTER TABLE TB_OBJETOS
+ADD (
+    ESTADO VARCHAR2(10),          -- Indica si el objeto es CORRECTO o INCORRECTO
+    NOMBRE_CORRECTO VARCHAR2(128) -- Guarda el identificador con el prefijo adecuado
+);
+
+-- Creación del procedimiento PR_COMPROBAR
+CREATE OR REPLACE PROCEDURE PR_COMPROBAR(ESQUEMA IN VARCHAR2 DEFAULT NULL) AS
+BEGIN
+    -- Cursor de actualización para recorrer TB_OBJETOS
+    FOR cur_objetos IN (
+        SELECT T.ROWID AS ROW_ID, T.NOMBRE, T.TIPO, T.ESQUEMA_ORIGINAL, E.PREFIJO
+        FROM TB_OBJETOS T
+        LEFT JOIN TB_ESTILO E ON T.TIPO = E.TIPO_OBJETO
+        WHERE ESQUEMA IS NULL OR T.ESQUEMA_ORIGINAL = ESQUEMA
+    ) LOOP
+        -- Variables locales
+        DECLARE
+            v_nombre_correcto VARCHAR2(128);
+        BEGIN
+            -- Calcular el nombre correcto según el prefijo
+            v_nombre_correcto := cur_objetos.PREFIJO || cur_objetos.NOMBRE;
+
+            -- Si el nuevo nombre excede el tamaño permitido, recortar por la derecha
+            IF LENGTH(v_nombre_correcto) > 128 THEN
+                v_nombre_correcto := SUBSTR(v_nombre_correcto, 1, 128);
+            END IF;
+
+            -- Determinar si es correcto o incorrecto
+            IF cur_objetos.NOMBRE LIKE cur_objetos.PREFIJO || '%' THEN
+                UPDATE TB_OBJETOS
+                SET ESTADO = 'CORRECTO',
+                    NOMBRE_CORRECTO = cur_objetos.NOMBRE
+                WHERE ROWID = cur_objetos.ROW_ID;
+            ELSE
+                UPDATE TB_OBJETOS
+                SET ESTADO = 'INCORRECTO',
+                    NOMBRE_CORRECTO = v_nombre_correcto
+                WHERE ROWID = cur_objetos.ROW_ID;
+            END IF;
+        END;
+    END LOOP;
+
+    -- Confirmar los cambios
+    COMMIT;
+END PR_COMPROBAR;
+/
