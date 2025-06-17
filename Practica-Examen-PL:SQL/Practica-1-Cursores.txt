@@ -1,0 +1,96 @@
+CREATE TABLE MENSAJES(Codigo NUMBER(2) PRIMARY KEY, Texto VARCHAR2(50));
+CREATE TABLE USUARIOS(Codigo NUMBER(2) PRIMARY KEY, Nombre VARCHAR2(50));
+SELECT * FROM USER_TABLES;
+
+SET SERVEROUTPUT ON;
+
+--------------------------------------------- EJERCICIO 1 -----------------------------------------------
+
+-- PRIMERA FORMA (MÁS COMPLICADA)
+
+DECLARE
+
+    CURSOR cur_tablas IS SELECT TABLE_NAME FROM USER_TABLES;
+    v_nombre USER_TABLES.TABLE_NAME%TYPE;
+    v_tablespace USER_TABLES.TABLESPACE_NAME%TYPE;
+    
+BEGIN
+    /*
+        OPEN
+        1) Ejecuta la consulta select definida en el declare
+        2) Reserva memoria para los resultados
+        3) Posiciona el cursor antes del primer registro
+    */
+    OPEN cur_tablas; 
+    LOOP
+        /*
+            FETCH
+            1) Lee la siguiente fila disponible del cursor
+            2) Copia los valores de esa fila a las variables especificadas
+            3) Mueve el puntero del cursor a la siguiente fila
+        */
+        FETCH cur_tablas INTO v_nombre;
+        
+        -- Verifica si el último FETCH encontró una fila válida, en caso contrario sale del bucle
+        EXIT WHEN cur_tablas%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('La tabla ' || v_nombre || ' pertenece al esquema ' || USER);
+    END LOOP;
+    /*
+        CLOSE
+        1) Libera memoria reservada por el cursor
+        2) Libera los recursos del sistema
+        3) Invalida el cursor (no puede usarse hasta abrirlo de nuevo)
+    */
+    CLOSE cur_tablas;
+
+END;
+/
+
+-- SEGUNDA FORMA (USANDO BUCLE FOR)
+
+DECLARE
+
+    CURSOR cur_tablas IS SELECT TABLE_NAME FROM USER_TABLES;
+
+BEGIN
+    -- La variable v_tabla representa una fila de las que obtiene el cursor
+    FOR v_tabla IN cur_tablas LOOP
+        DBMS_OUTPUT.PUT_LINE('La tabla ' || v_tabla.TABLE_NAME || ' pertenece al esquema ' || USER);
+    END LOOP;
+END;
+/
+
+--------------------------------------------- EJERCICIO 2 -----------------------------------------------
+
+DECLARE
+
+    CURSOR cur_tablas IS SELECT TABLE_NAME, OWNER FROM ALL_TABLES;
+
+BEGIN
+    -- La variable v_tabla representa una fila de las que obtiene el cursor
+    FOR v_tabla IN cur_tablas LOOP
+        DBMS_OUTPUT.PUT_LINE('La tabla ' || v_tabla.TABLE_NAME || ' pertenece al esquema ' || v_tabla.OWNER);
+    END LOOP;
+END;
+/
+
+------------------------------------------------------ EJERCICIO 5 -------------------------------------------------------
+
+/*
+    DECODE compara el valor de P_MODE con 0, si son iguales devuelve OWNER y el último argumento es caso contrario (USER)
+*/
+
+CREATE OR REPLACE PROCEDURE RECORRE_TABLAS(P_MODE IN NUMBER) AS
+    CURSOR cur_tablas IS SELECT TABLE_NAME, OWNER FROM ALL_TABLES
+    WHERE OWNER = DECODE(P_MODE, 0, OWNER, USER);
+BEGIN
+    IF P_MODE IS NULL THEN
+        DBMS_OUTPUT.PUT_LINE('You need to specifiy a value for P_MODE, 0 for the tables you have permission
+        any other number to get your own tables');
+    ELSE
+        FOR v_tabla IN cur_tablas LOOP
+        DBMS_OUTPUT.PUT_LINE('La tabla ' || v_tabla.TABLE_NAME || ' pertenece al esquema ' || v_tabla.OWNER);
+        END LOOP;
+    END IF;
+END;
+/
